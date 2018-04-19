@@ -36,10 +36,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Left" id="T02-HV-2xU"/>
+                        <barButtonItem title="Left" id="T02-HV-2xU">
+                            <connections>
+                                <action selector="btnLeft:" destination="BYZ-38-t0r" id="ehb-Ro-bfm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Sfe-2k-yhj"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Z10-KC-0qU"/>
-                        <barButtonItem title="Right" id="33W-58-U23"/>
+                        <barButtonItem title="Right" id="33W-58-U23">
+                            <connections>
+                                <action selector="btnRotateRight:" destination="BYZ-38-t0r" id="GiO-YR-wKi"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
