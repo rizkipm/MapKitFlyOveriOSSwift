@@ -19,12 +19,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.mapType = .satelliteFlyover
+        
+        // coordinates of Capitol
+        let coordinate = CLLocationCoordinate2DMake(38.889819, -77.009066)
+        
+        camera = MKMapCamera(lookingAtCenter: coordinate, fromDistance: distance, pitch: pitch, heading: heading)
+        mapView.camera = camera!
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func btnRotateRight(_ sender: Any) {
     }
     @IBAction func btnLeft(_ sender: Any) {
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            self.camera!.heading -= 10
+            self.mapView.camera = self.camera!
+        })
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
