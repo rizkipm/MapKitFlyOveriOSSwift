@@ -18,19 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AOi-e4-87a">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AOi-e4-87a">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="632"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="632" id="IYt-6l-YYb"/>
+                                    <constraint firstAttribute="width" constant="375" id="oBD-GC-W3C"/>
+                                </constraints>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AOi-e4-87a" secondAttribute="bottom" constant="35" id="22L-QW-V3F"/>
+                            <constraint firstItem="AOi-e4-87a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4YM-62-b5h"/>
+                            <constraint firstItem="AOi-e4-87a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BVs-rf-xhE"/>
+                            <constraint firstItem="AOi-e4-87a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EcN-kL-95K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Item" id="T02-HV-2xU"/>
+                        <barButtonItem title="Left" id="T02-HV-2xU"/>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Sfe-2k-yhj"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Z10-KC-0qU"/>
-                        <barButtonItem title="Item" id="33W-58-U23"/>
+                        <barButtonItem title="Right" id="33W-58-U23"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
