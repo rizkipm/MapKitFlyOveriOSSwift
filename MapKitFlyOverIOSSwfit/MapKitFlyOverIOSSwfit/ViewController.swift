@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         mapView.mapType = .satelliteFlyover
         
         // coordinates of Capitol
-        let coordinate = CLLocationCoordinate2DMake(38.889819, -77.009066)
+        let coordinate = CLLocationCoordinate2DMake(-6.121435, 106.774124)
         
         camera = MKMapCamera(lookingAtCenter: coordinate, fromDistance: distance, pitch: pitch, heading: heading)
         mapView.camera = camera!
